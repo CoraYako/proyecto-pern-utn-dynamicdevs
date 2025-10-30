@@ -21,6 +21,7 @@ function LoginPege() {
       <Card>
         {loginErrros &&
           loginErrros.map((error) => (
+            // eslint-disable-next-line react/jsx-key
             <p className="bg-red-500 text-white p-2">{error}</p>
           ))}
         <h1 className="text-4xl font-bold my-2 text-center">Inciar sesión</h1>

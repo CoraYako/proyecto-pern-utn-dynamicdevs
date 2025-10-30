@@ -22,8 +22,8 @@ function RegisterPage() {
     <Container className="h-[calc(100vh-10rem)] flex items-center justify-center">
       <Card>
         {setUserErrors &&
-          setUserErrors.map((error) => (
-            <p className="bg-red-500 text-white p-2">{error}</p>
+          setUserErrors.map((error, index) => (
+            <p key={index} className="bg-red-500 text-white p-2">{error}</p>
           ))}
         <h3 className="text-4xl font-bold my-2">Registro</h3>
         <form onSubmit={onSubmit}>

@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 import { createContext, useState, useContext ,useEffect } from "react";
 import Cookie from "js-cookie";
 import axios from "../api/axios";
@@ -26,7 +27,7 @@ export function AuthProvider({ children }) {
       setIsAuth(true);
       return res.data;
     } catch (error) {
-      console.log(error);
+       console.log(error);
       if (Array.isArray(error.response.data)) {
         return setErrors(error.response.data);
       }
@@ -41,7 +42,7 @@ export function AuthProvider({ children }) {
       setIsAuth(true);
       return res.data;
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       if (Array.isArray(error.response.data)) {
         return setErrors(error.response.data);
       }
